@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随便看看吧 - 随机网址生成器</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>随便看看吧</h1>
+            <p>发现互联网的精彩世界</p>
+            <div class="feature-badge">
+                <i class="fas fa-check-circle"></i> 智能推荐: 已访问的网址不会重复推荐
+            </div>
+        </header>
+
+        <main>
+            <div class="card">
+                <div class="url-display" id="urlDisplay">
+                    <span class="placeholder">点击按钮生成随机网址...</span>
+                </div>
+                <div class="buttons">
+                    <button id="generateBtn" class="btn primary">
+                        <i class="fas fa-random"></i> 随机生成
+                    </button>
+                    <button id="openUrlBtn" class="btn secondary" disabled>
+                        <i class="fas fa-external-link-alt"></i> 打开网址
+                    </button>
+                    <button id="copyUrlBtn" class="btn secondary" disabled>
+                        <i class="fas fa-copy"></i> 复制链接
+                    </button>
+                </div>
+            </div>
+
+            <div class="categories">
+                <h3>网址分类</h3>
+                <div class="category-buttons">
+                    <button class="category-btn active" data-category="all">全部</button>
+                    <button class="category-btn" data-category="social">社交媒体</button>
+                    <button class="category-btn" data-category="knowledge">知识学习</button>
+                    <button class="category-btn" data-category="entertainment">娱乐休闲</button>
+                    <button class="category-btn" data-category="tool">实用工具</button>
+                </div>
+            </div>
+
+            <div class="history">
+                <h3>历史记录</h3>
+                <ul id="historyList" class="history-list">
+                    <!-- 历史记录将在这里动态生成 -->
+                </ul>
+                <button id="clearHistoryBtn" class="btn secondary small">
+                    <i class="fas fa-trash"></i> 清除记录
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2023 随便看看吧 | 探索互联网的随机之旅</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
